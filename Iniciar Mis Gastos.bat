@@ -6,5 +6,5 @@ echo   Iniciando la app "Mis Gastos"...
 echo   Se abrira el navegador en http://localhost:8501
 echo   Para detener la app, cierra esta ventana.
 echo ============================================
-streamlit run app.py
+streamlit run app.py --server.headless=false
 pause

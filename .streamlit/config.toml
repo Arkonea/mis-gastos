@@ -14,8 +14,10 @@ secondaryBackgroundColor = "#161b22"
 textColor = "#e6edf3"
 primaryColor = "#22c55e"
 
+# NOTA: no fijar 'headless' aquí. En Streamlit Cloud debe quedar en su valor
+# por defecto (true); si se fuerza false, la app se queda esperando el correo
+# de bienvenida y el servidor nunca arranca.
 [server]
-headless = false
 runOnSave = true
 
 [browser]
