@@ -1,0 +1,16 @@
+# Secretos y credenciales
+assets/credentials.json
+.streamlit/secrets.toml
+.streamlit/secrets_cloud.toml
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Streamlit / SO
+.streamlit/secrets.local.toml
+.DS_Store
+Thumbs.db
