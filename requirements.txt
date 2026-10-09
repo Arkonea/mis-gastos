@@ -4,3 +4,6 @@ google-auth>=2.29.0
 pandas>=2.0.0
 plotly>=5.20.0
 tzdata>=2024.1
+# pyarrow 25.0.x tiene un bug (SIGSEGV/mimalloc) que tumba el servidor en
+# Streamlit Cloud. Se fija por debajo de 25.0.0 para evitarlo.
+pyarrow<25.0.0
