@@ -87,10 +87,16 @@ def mes_label(ym: str) -> str:
 def require_conexion() -> None:
     """Detiene la página con un mensaje claro si no hay conexión a Sheets."""
     if not st.session_state.get("conectado", False):
-        st.error(
-            "Sin conexión a Google Sheets. Verifica `assets/credentials.json` "
-            "y `.streamlit/secrets.toml` (consulta CONFIGURACION_GOOGLE.md)."
-        )
+        st.error("Sin conexión a Google Sheets.")
+        detalle = st.session_state.get("error_conexion", "")
+        if detalle:
+            st.write("**Detalle del error:**")
+            st.code(detalle, language="text")
+        else:
+            st.caption(
+                "No se registró un detalle. Revisa CONFIGURACION_GOOGLE.md y los "
+                "Secrets de la app."
+            )
         st.stop()
 
 
